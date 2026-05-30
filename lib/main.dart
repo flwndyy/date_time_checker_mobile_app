@@ -332,10 +332,10 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                           borderRadius: BorderRadius.circular(14),
                         ),
                         side: const BorderSide(
-                          color: Color(0xFF313244),
+                          color: Color(0x1FCDD6F4), // Reflective glass hairline border
                           width: 1.5,
                         ),
-                        backgroundColor: const Color(0xFF1E293B),
+                        backgroundColor: const Color(0x0FCDD6F4), // Glass fill
                         foregroundColor: const Color(0xFFF5E0DC),
                       ),
                       child: const Text(
@@ -349,7 +349,7 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                   ),
                   const SizedBox(width: 16),
 
-                  // Check Button (Gradient Accent)
+                  // Check Button (Gradient Accent with Glow Shadow)
                   Expanded(
                     child: Container(
                       height: 52,
@@ -365,8 +365,8 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                         borderRadius: BorderRadius.circular(14),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFF10B981).withOpacity(0.3),
-                            blurRadius: 10,
+                            color: const Color(0xFF10B981).withOpacity(0.4), // Enhanced neon glow
+                            blurRadius: 12,
                             offset: const Offset(0, 4),
                           ),
                         ],
