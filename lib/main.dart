@@ -184,7 +184,7 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                         TextField(
                           controller: _dayController,
                           focusNode: _dayFocusNode,
-                          textAlign: Alignment.center.x == 0 ? TextAlign.center : TextAlign.center,
+                          textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
                           textInputAction: TextInputAction.next,
                           onSubmitted: (_) => _monthFocusNode.requestFocus(),
@@ -197,11 +197,11 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                             hintText: '30',
                             hintStyle: const TextStyle(color: Color(0xFF585B70)),
                             filled: true,
-                            fillColor: const Color(0xFF1E293B),
+                            fillColor: const Color(0x0FCDD6F4), // Glassmorphic fill
                             contentPadding: const EdgeInsets.symmetric(vertical: 14),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide.none,
+                              borderSide: const BorderSide(color: Color(0x1FCDD6F4), width: 1.0), // Glass border
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
@@ -235,7 +235,7 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                           controller: _monthController,
                           focusNode: _monthFocusNode,
                           textAlign: TextAlign.center,
-                          keyboardType: TextInputType.text,
+                          keyboardType: TextInputType.number, // Set to numeric keyboard
                           textInputAction: TextInputAction.next,
                           onSubmitted: (_) => _yearFocusNode.requestFocus(),
                           style: const TextStyle(
@@ -247,11 +247,11 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                             hintText: '5',
                             hintStyle: const TextStyle(color: Color(0xFF585B70)),
                             filled: true,
-                            fillColor: const Color(0xFF1E293B),
+                            fillColor: const Color(0x0FCDD6F4), // Glassmorphic fill
                             contentPadding: const EdgeInsets.symmetric(vertical: 14),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide.none,
+                              borderSide: const BorderSide(color: Color(0x1FCDD6F4), width: 1.0), // Glass border
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
@@ -297,11 +297,11 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                             hintText: '2026',
                             hintStyle: const TextStyle(color: Color(0xFF585B70)),
                             filled: true,
-                            fillColor: const Color(0xFF1E293B),
+                            fillColor: const Color(0x0FCDD6F4), // Glassmorphic fill
                             contentPadding: const EdgeInsets.symmetric(vertical: 14),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide.none,
+                              borderSide: const BorderSide(color: Color(0x1FCDD6F4), width: 1.0), // Glass border
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
