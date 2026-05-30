@@ -53,3 +53,6 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Superpowers brainstorming session data
+.superpowers/
