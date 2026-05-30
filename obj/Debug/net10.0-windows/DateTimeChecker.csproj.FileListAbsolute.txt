@@ -1,0 +1,14 @@
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.AssemblyInfoInputs.cache
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.AssemblyInfo.cs
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.csproj.CoreCompileInputs.cache
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\bin\Debug\net10.0-windows\DateTimeChecker.exe
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\bin\Debug\net10.0-windows\DateTimeChecker.deps.json
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\bin\Debug\net10.0-windows\DateTimeChecker.runtimeconfig.json
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\bin\Debug\net10.0-windows\DateTimeChecker.dll
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\bin\Debug\net10.0-windows\DateTimeChecker.pdb
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.dll
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\refint\DateTimeChecker.dll
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.pdb
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\DateTimeChecker.genruntimeconfig.cache
+C:\Users\Legion\.gemini\antigravity-ide\scratch\DateTimeChecker\obj\Debug\net10.0-windows\ref\DateTimeChecker.dll
