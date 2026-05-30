@@ -56,3 +56,9 @@ dkms.conf
 
 # Superpowers brainstorming session data
 .superpowers/
+
+# .NET / C# Build Directories
+[Bb]in/
+[Oo]bj/
+.vs/
+*.sln.DotSettings.user
