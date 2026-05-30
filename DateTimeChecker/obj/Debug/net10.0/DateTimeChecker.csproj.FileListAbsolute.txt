@@ -1,0 +1,12 @@
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.GeneratedMSBuildEditorConfig.editorconfig
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.AssemblyInfoInputs.cache
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.AssemblyInfo.cs
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.csproj.CoreCompileInputs.cache
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.sourcelink.json
+D:\date_time_checker_mobile_app\DateTimeChecker\bin\Debug\net10.0\DateTimeChecker.deps.json
+D:\date_time_checker_mobile_app\DateTimeChecker\bin\Debug\net10.0\DateTimeChecker.dll
+D:\date_time_checker_mobile_app\DateTimeChecker\bin\Debug\net10.0\DateTimeChecker.pdb
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.dll
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\refint\DateTimeChecker.dll
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\DateTimeChecker.pdb
+D:\date_time_checker_mobile_app\DateTimeChecker\obj\Debug\net10.0\ref\DateTimeChecker.dll
