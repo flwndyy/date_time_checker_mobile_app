@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 import 'date_time_validator.dart';
 
 void main() {
@@ -77,13 +78,114 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
     // Hide keyboard
     FocusScope.of(context).unfocus();
 
+    final result = DateTimeValidator.validate(
+      _dayController.text,
+      _monthController.text,
+      _yearController.text,
+    );
+
     setState(() {
-      _validationResult = DateTimeValidator.validate(
-        _dayController.text,
-        _monthController.text,
-        _yearController.text,
-      );
+      _validationResult = result;
     });
+
+    showDialog(
+      context: context,
+      barrierColor: Colors.black.withOpacity(0.4),
+      builder: (BuildContext context) {
+        final glowColor = result.isValid ? const Color(0xFF10B981) : const Color(0xFFEF4444);
+        final title = result.isValid ? "Valid Date!" : "Validation Failed";
+        final icon = result.isValid ? Icons.shield_outlined : Icons.warning_amber_outlined;
+
+        return Center(
+          child: SingleChildScrollView(
+            child: Dialog(
+              backgroundColor: Colors.transparent,
+              insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 12.0, sigmaY: 12.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0x1FCDD6F4),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(
+                        color: glowColor.withOpacity(0.3),
+                        width: 1.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: glowColor.withOpacity(0.15),
+                          blurRadius: 20,
+                          spreadRadius: 2,
+                        ),
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(icon, size: 54, color: glowColor),
+                        const SizedBox(height: 16),
+                        Text(
+                          title,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: glowColor,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          result.message,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFFCDD6F4),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          result.details,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            height: 1.4,
+                            color: Color(0xFFA6ADC8),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        SizedBox(
+                          width: double.infinity,
+                          height: 48,
+                          child: OutlinedButton(
+                            onPressed: () => Navigator.of(context).pop(),
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(color: Color(0x1FCDD6F4)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              backgroundColor: const Color(0x0FCDD6F4),
+                              foregroundColor: const Color(0xFFCDD6F4),
+                            ),
+                            child: const Text(
+                              "Done",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override
