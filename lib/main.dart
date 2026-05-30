@@ -49,8 +49,7 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
   final FocusNode _monthFocusNode = FocusNode();
   final FocusNode _yearFocusNode = FocusNode();
 
-  // Validation Result State
-  ValidationResult? _validationResult;
+
 
   @override
   void dispose() {
@@ -68,7 +67,6 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
       _dayController.clear();
       _monthController.clear();
       _yearController.clear();
-      _validationResult = null;
     });
     // Return focus to first field
     _dayFocusNode.requestFocus();
@@ -83,10 +81,6 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
       _monthController.text,
       _yearController.text,
     );
-
-    setState(() {
-      _validationResult = result;
-    });
 
     showDialog(
       context: context,
@@ -190,43 +184,6 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
 
   @override
   Widget build(BuildContext context) {
-    // Theme Colors
-    const cardNeutralBg = Color(0xFF1E293B);
-    const cardNeutralText = Color(0xFFCDD6F4);
-    const cardNeutralSubText = Color(0xFFA6ADC8);
-
-    const cardValidBg = Color(0xFF143F2E);
-    const cardValidText = Color(0xFF34D399);
-
-    const cardInvalidBg = Color(0xFF451A23);
-    const cardInvalidText = Color(0xFFF87171);
-
-    // Get current result colors
-    Color currentCardBg = cardNeutralBg;
-    Color currentTitleColor = cardNeutralText;
-    Color currentTextColor = cardNeutralSubText;
-    String currentTitle = "Ready to Validate";
-    String currentMessage =
-        "Fill in the Day, Month/Time, and Year fields above, then tap 'Check Validity' to verify the calendar date.";
-
-    if (_validationResult != null) {
-      if (_validationResult!.isValid) {
-        currentCardBg = cardValidBg;
-        currentTitleColor = cardValidText;
-        currentTextColor = cardValidText;
-        currentTitle = "✅ Validation Succeeded";
-        currentMessage =
-            "${_validationResult!.message}\n\n${_validationResult!.details}";
-      } else {
-        currentCardBg = cardInvalidBg;
-        currentTitleColor = cardInvalidText;
-        currentTextColor = cardInvalidText;
-        currentTitle = "❌ Validation Failed";
-        currentMessage =
-            "${_validationResult!.message}\n\n${_validationResult!.details}";
-      }
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -494,48 +451,6 @@ class _DateTimeCheckerHomeState extends State<DateTimeCheckerHome> {
                     ),
                   ),
                 ],
-              ),
-              const SizedBox(height: 36),
-
-              // Dynamic Animated Result Card
-              AnimatedContainer(
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-                width: double.infinity,
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: currentCardBg,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.15),
-                      blurRadius: 12,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      currentTitle,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: currentTitleColor,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      currentMessage,
-                      style: TextStyle(
-                        fontSize: 15,
-                        height: 1.5,
-                        color: currentTextColor,
-                      ),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),
